@@ -40,6 +40,7 @@ print(vectorizer.vocabulary_)
 
 
 # TF-IDF - TermFrequency Inverse Document Frequency
+documents = [IMDB1, IMDB2, IMDB3]
 #Create Vector space
 tfidf = TfidfVectorizer()
 #Compute TF-IDF Values
@@ -57,3 +58,18 @@ print(result)
 #Show in Matrix
 print('\ntf-idf values in matrix form:')
 print(result.toarray())
+
+#Ausgae für Rick und artifacts
+print('\nIDF-Values:')
+keywords = ["rick", "artifacts"]
+for ele1, ele2 in zip (tfidf.get_feature_names(), tfidf.idf_):
+    if ele1 in keywords:
+        print(ele1, ":", ele2)
+
+
+rick_ID = 35
+aritfacts_ID = 2
+for i in range(3):
+    print('\nIn Document ', i+1, ' the TF-IDF value is: ')
+    print('artifacts: ',(result.toarray())[i,aritfacts_ID])
+    print('rick:      ', (result.toarray())[i,rick_ID])
