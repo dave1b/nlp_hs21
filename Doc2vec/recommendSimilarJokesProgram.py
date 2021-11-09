@@ -4,7 +4,7 @@ from csvToArray import csvToArray
 
 # Load Model
 model = Doc2Vec.load("Doc2vec/trained/jokes.model")
-dataSet = csvToArray('Doc2vec/shortjokes.csv')
+dataSet = csvToArray('Doc2vec/datasets/shortjokes.csv')
 
 def main():
     userInputSimilar()
