@@ -26,12 +26,6 @@ def findAndPrintSimilarJoke(joke):
     for joke in similarJokes:
         print(dataSet[int(joke[0])] , ' has the similarity: ', joke[1])
 
-def findAndPrintSimilarJoke(joke):
-    joke = word_tokenize(joke.lower())
-    similarJokes = model.dv.most_similar(positive=[model.infer_vector(joke)], topn=6)
-    for joke in similarJokes:
-        print(dataSet[int(joke[0])] , ' has the similarity: ', joke[1])
-
 #Example
 def example():
     joke = "Never trust math teachers who use graph paper. They're always plotting something."
