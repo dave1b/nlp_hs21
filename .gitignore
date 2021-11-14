@@ -1,2 +1,5 @@
 /.ipynb_checkpoints
 /__pycache__
+pretrainedModel/glove.6B.50d.txt
+pretrainedModel/glove.6B.300d.txt
+Doc2vec/__pycache__/*
