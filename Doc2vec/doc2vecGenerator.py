@@ -33,9 +33,9 @@ def csvToDoc2Vec(csvPath, pathForModelSave):
     model.save(pathForModelSave)
     print("Duration of building Doc2Vec: ", time.time()-startTime)
 
-    def main():
-        csvToDoc2Vec('Doc2vec/shortjokes.csv',"Doc2Vec/trained/jokes.model")
-        #example()
+def main():
+    csvToDoc2Vec('Doc2vec/datasets/shortjokes.csv',"Doc2Vec/trained/jokes.model")
+    #example()
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()
